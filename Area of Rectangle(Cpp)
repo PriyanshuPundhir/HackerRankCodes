@@ -1,0 +1,21 @@
+
+class Rectangle{
+    public:
+    int height;
+    int width;
+    public:
+    void display(){
+        cout<<height<<" "<<width;
+    }
+};
+class RectangleArea: public Rectangle{
+public:
+void read_input(){
+cin>>height>>width;
+}
+void display(){
+    cout<<endl<<width*height;
+}
+};
+
+
