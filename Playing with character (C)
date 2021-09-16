@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() 
+{
+
+  char str[20]; char strp[20]; char strz[20];
+   scanf("%[^\n]%*c", str); 
+   
+   
+   scanf("%[^\n]%*c", strp); 
+   
+    
+   scanf("%[^\n]%*c", strz); 
+   printf("%s \n", str);
+   printf("%s \n", strp); 
+   printf("%s \n", strz); 
+   
+   
+   
+    return 0;
+}
+
