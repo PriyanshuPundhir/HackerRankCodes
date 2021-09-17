@@ -1,0 +1,31 @@
+#include <stdio.h>
+void reverse_array(int [], int);
+
+int main()
+{
+  int n, c, a[1000];
+
+  scanf("%d", &n);
+
+  for (c = 0; c < n; c++)
+    scanf("%d", &a[c]);
+
+  reverse_array(a, n);
+
+
+  for (c = 0 ;c < n; c++)
+    printf("%d\t", a[c]);
+
+  return 0;
+}
+
+void reverse_array(int a[], int n)
+{
+  int c, t;
+
+  for (c = 0; c < n/2; c++) {
+    t = a[c];                  
+    a[c] = a[n-c-1];
+    a[n-c-1] = t;
+  }
+}
