@@ -1,0 +1,16 @@
+
+
+class BadLengthException 
+{
+    int size;
+    public:
+    BadLengthException(int n){  
+        //cALL BY THROW CONSTRUCTOR WITH PARAMETER
+    size=n;
+    }
+    int what()
+    {
+        return size;
+    }
+};
+
