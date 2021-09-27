@@ -1,0 +1,48 @@
+
+
+/*
+ * Complete the 'deleteNode' function below.
+ *
+ * The function is expected to return an INTEGER_SINGLY_LINKED_LIST.
+ * The function accepts following parameters:
+ *  1. INTEGER_SINGLY_LINKED_LIST llist
+ *  2. INTEGER position
+ */
+
+/*
+ * For your reference:
+ *
+ * SinglyLinkedListNode {
+ *     int data;
+ *     SinglyLinkedListNode* next;
+ * };
+ *
+ */
+
+
+SinglyLinkedListNode* deleteNode(SinglyLinkedListNode* head, int position) {
+    // If we need to delete the head
+    if (position == 0) {
+        SinglyLinkedListNode* next = head->next;
+        delete head;
+        return next;
+    }
+
+    // For any other node to delete
+    SinglyLinkedListNode* temp = head;
+    SinglyLinkedListNode* prev;
+    int pos = 0;
+    while (temp != nullptr) {
+        if (pos == position) break;
+        prev = temp;
+        temp = temp->next;
+        pos++;
+    }
+
+    prev->next = temp->next;
+
+    delete temp;
+    return head;
+}
+
+
