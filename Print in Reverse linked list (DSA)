@@ -1,0 +1,31 @@
+
+
+
+/*
+ * For your reference:
+ *
+ * SinglyLinkedListNode {
+ *     int data;
+ *     SinglyLinkedListNode* next;
+ * };
+ *
+ */
+
+void reversePrint(SinglyLinkedListNode* llist) {
+    {
+        if(!llist)
+        return;
+        reversePrint(llist->next);
+        printf("%d\n",llist->data);
+    }
+
+    deque<int> values;
+
+    
+    
+    
+
+
+}
+
+
