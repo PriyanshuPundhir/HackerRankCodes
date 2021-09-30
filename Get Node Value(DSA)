@@ -1,0 +1,41 @@
+
+
+/*
+ * Complete the 'getNode' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts following parameters:
+ *  1. INTEGER_SINGLY_LINKED_LIST llist
+ *  2. INTEGER positionFromTail
+ */
+
+/*
+ * For your reference:
+ *
+ * SinglyLinkedListNode {
+ *     int data;
+ *     SinglyLinkedListNode* next;
+ * };
+ *
+ */
+
+int getNode(SinglyLinkedListNode* head, int positionFromTail) {
+    if (head == nullptr) return -1;
+
+    int counter = 0, forward = 0;
+    SinglyLinkedListNode* temp = head;
+    SinglyLinkedListNode* node = head;
+
+    while (temp->next != NULL) {
+        forward++;
+        temp = temp->next;
+        if (forward - counter > positionFromTail) {
+            node = node->next;
+            counter++;
+        }
+    }
+
+    return node->data;
+}
+
+
